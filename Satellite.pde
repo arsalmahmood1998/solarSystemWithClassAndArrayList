@@ -21,11 +21,9 @@ class Satellite {
     location.y+=speed.y;
     if (location.x+20 >= width|| location.x-20 <= 0) {
       speed.x*=-1;
-      println(location.x);
     }
     if (location.y+20 >= height|| location.y<=0) {
       speed.y*=-1;
-      println(location.y);
     }
   }
 }

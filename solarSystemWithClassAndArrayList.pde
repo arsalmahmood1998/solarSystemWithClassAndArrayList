@@ -1,4 +1,6 @@
 ArrayList <Planet> allPlanets;
+ArrayList <Satellite> allSatellites;
+
 void setup() {
   size(800, 800);
   PVector orbitCenter= new PVector(width/2, height/2);
@@ -9,13 +11,18 @@ void setup() {
   allPlanets.add(earth);
   Planet mars=new Planet(50, orbitCenter, 300, true);
   allPlanets.add(mars);
+  allSatellites= new ArrayList<Satellite>();
 }
 
-void draw() {
+void draw() { 
   background(0);
   for (Planet currentPlanet : allPlanets) {    
     currentPlanet.drawPlanet();
     currentPlanet.drawOrbit();
     currentPlanet.movePlanet();
+  }
+  for (Satellite currentSatellite : allSatellites) {
+    currentSatellite.drawSatellite();
+    currentSatellite.updatelocation();
   }
 }

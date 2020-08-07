@@ -12,3 +12,7 @@ void keyPressed() {
     }
   }
 }
+void mouseClicked() {
+  Satellite satOne =new Satellite(mouseX, mouseY);
+  allSatellites.add(satOne);
+}
